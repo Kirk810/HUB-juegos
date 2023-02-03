@@ -9,7 +9,7 @@ const template = () => `
       <button>Tres en raya<button>
       <button>Quiz<button>
     </ul>
-  <a class="back">Log out<a>
+  <a class="back" href="">Log out<a>
 </section>
 `
 

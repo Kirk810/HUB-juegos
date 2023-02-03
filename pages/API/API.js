@@ -4,8 +4,13 @@ import "./API.css";
 
 const template = () => `
 <a href="./Home/Home" class="back">BACK</a>
-<section class="api">
+<section class="API">
   <h2>API Pokemon</h2>
+    <ul>
+      <input type="text" id="loginInput"/>
+      <button id="loginBtn"><img src="/public/utils/287221.png" alt""></button>
+    </ul>
+      <div class="pokemon"></div>
 </section>
 `;
 
@@ -32,10 +37,10 @@ const mapPokemon = (pokemons) => {
  };
 
  const printPokemons = (pokemons) => {
-  const container = document.querySelector("#app");
+  const container = document.querySelector(".pokemon");
   container.innerHTML = " ";
   for (const pokemon of pokemons){
-    const div = document.createElement("div");
+    const div = document.createElement("figure");
     div.innerHTML = `
     <h2>${pokemon.name}</h2>
     <h3>${pokemon.experience}</h3>
