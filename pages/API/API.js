@@ -1,7 +1,5 @@
 import "./API.css";
 
-//.sprites.other.dream_world.front_default
-
 const template = () => `
 <a href="./Home/Home" class="back">BACK</a>
 <section class="API">
@@ -26,11 +24,12 @@ console.log(pokeArray);
 }
 
 const mapPokemon = (pokemons) => {
-   const allPokemon = pokemons.map((pokemon) => ({
-     name: pokemon.name,
-     experience: pokemon.base_experience,
-     element: pokemon.types[0].type.name,
-     weight: pokemon.weight
+  const allPokemon = pokemons.map((pokemon) => ({
+    image: pokemon.sprites.other.dream_world.front_default,
+    name: pokemon.name,
+    experience: pokemon.base_experience,
+    element: pokemon.types[0].type.name,
+    weight: pokemon.weight
    }));
    printPokemons(allPokemon);
    console.log(allPokemon);
@@ -43,6 +42,7 @@ const mapPokemon = (pokemons) => {
     const div = document.createElement("figure");
     div.innerHTML = `
     <h2>${pokemon.name}</h2>
+    <img src=${pokemon.image} alt= ${pokemon.name}
     <h3>${pokemon.experience}</h3>
     <h3>${pokemon.element}</h3>
     <h3>${pokemon.weight}</h3>
