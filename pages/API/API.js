@@ -26,14 +26,14 @@ console.log(pokeArray);
 }
 
 const mapPokemon = (pokemons) => {
-   const allPokemons = pokemons.map((pokemon) => ({
+   const allPokemon = pokemons.map((pokemon) => ({
      name: pokemon.name,
      experience: pokemon.base_experience,
      element: pokemon.types[0].type.name,
      weight: pokemon.weight
    }));
-   printPokemons(allPokemons);
-   console.log(allPokemons);
+   printPokemons(allPokemon);
+   console.log(allPokemon);
  };
 
  const printPokemons = (pokemons) => {
@@ -50,6 +50,8 @@ const mapPokemon = (pokemons) => {
     container.appendChild(div);
   }
  }
+
+
 
 export const printTemplate = () => {
   document.querySelector("#app").innerHTML = template();
