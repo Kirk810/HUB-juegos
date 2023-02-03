@@ -1,0 +1,23 @@
+.home > h2{
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+}
+
+.home > a{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.hub{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
