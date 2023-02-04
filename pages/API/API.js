@@ -5,8 +5,8 @@ const template = () => `
 <section class="API">
   <h2>API Pokemon</h2>
     <ul>
-      <input type="text" id="loginInput"/>
-      <button id="loginBtn"><img src="/public/utils/287221.png" alt""></button>
+      <input type="text" id="logInput"/>
+      <a class="pokeball" id="loginBtn"><img src="/public/utils/287221.png" alt""></a>
     </ul>
       <div class="pokemon"></div>
 </section>
@@ -20,11 +20,10 @@ const pokemon = async () => {
   pokeArray.push(data);
 };
 mapPokemon(pokeArray);
-console.log(pokeArray);
 }
 
 const mapPokemon = (pokemons) => {
-  const allPokemon = pokemons.map((pokemon) => ({
+  let allPokemon = pokemons.map((pokemon) => ({
     image: pokemon.sprites.other.dream_world.front_default,
     name: pokemon.name,
     experience: pokemon.base_experience,
@@ -32,7 +31,6 @@ const mapPokemon = (pokemons) => {
     weight: pokemon.weight
    }));
    printPokemons(allPokemon);
-   console.log(allPokemon);
  };
 
  const printPokemons = (pokemons) => {
@@ -51,9 +49,22 @@ const mapPokemon = (pokemons) => {
   }
  }
 
+ const filterCharacters = (characters) => {
+  const logInput = document.querySelector("#logInput");
+  const filteredCharacters = characters.filter((pokemon) =>
+    pokemon.name.toLowerCase().includes(logInput.value.toLowerCase())
+  );
+  printPokemons(filteredCharacters);
+};
 
+const addListener = () => {
+  logInput.addEventListener("input", () => {
+    document.querySelector(".pokemon").innerHTML = " ";
+    filterCharacters("allPokemon");
+  });}
 
 export const printTemplate = () => {
   document.querySelector("#app").innerHTML = template();
-  pokemon()
+  addListener();
+  pokemon();
 };
