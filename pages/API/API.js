@@ -17,13 +17,13 @@ const Url = "https://pokeapi.co/api/v2/pokemon/"
 let index = 1;
 let pokemons = []
 const getCharacters = async () => {
-    for (let i = 1; i <= 151; i++){
-        const data = await fetch(`${Url}${index}`)
-        index++
-        const json = await data.json();
-        pokemons.push(json);
-    }
-    mapPokemons(pokemons)
+  for (let i = 1; i <= 151; i++){
+    const data = await fetch(`${Url}${index}`)
+    index++
+    const json = await data.json();
+    pokemons.push(json);
+  }
+  mapPokemons(pokemons)
 }
 
 let mapPokemon = []
@@ -45,18 +45,18 @@ const printPokemons = (pokemons) => {
   const gallery = document.querySelector("#gallery");
   gallery.innerHTML = "";
   for (const pokemon of pokemons){
-      const figure = document.createElement("figure");
-      const card = document.createElement("div")
-      figure.innerHTML = `
-      <h3>${pokemon.id}</h3>
-      <h2>${pokemon.name}</h2>
-      <img src=${pokemon.image} alt= ${pokemon.name}
-      <h3>${pokemon.experience}</h3>
-      <h3 class=${pokemon.type}>${pokemon.type}</h3>
-      <h3 class=${pokemon.type2}>${pokemon?.type2}</h3>
-      <h3>${pokemon.height}</h3>
-      <h3>${pokemon.weight}</h3>
-      `
+    const figure = document.createElement("figure");
+    const card = document.createElement("div")
+    figure.innerHTML = `
+    <h3>${pokemon.id}</h3>
+    <h2>${pokemon.name}</h2>
+    <img src=${pokemon.image} alt= ${pokemon.name}
+    <h3>${pokemon.experience}</h3>
+    <h3 class=${pokemon.type}>${pokemon.type}</h3>
+    <h3 class=${pokemon.type2}>${pokemon?.type2}</h3>
+    <h3>${pokemon.height}</h3>
+    <h3>${pokemon.weight}</h3>
+    `
     card.appendChild(figure);
     gallery.appendChild(card);
   }}
