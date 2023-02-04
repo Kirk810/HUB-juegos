@@ -1,4 +1,4 @@
-//He rehecho todo el proceso de la API despues de llegar a un punto muerto que me estaba quitando mcho tiempo.
+//He rehecho todo el proceso de la API despues de llegar a un punto muerto que me estaba quitando mucho tiempo.
 
 import ("./API.css")
 
@@ -73,7 +73,7 @@ const filterCharacters = (pokemons) => {
     printPokemons(filter);
 }
 
-const categories = ["grass", "poison", "fire", "flying", "water", "bug", "normal", "electric", "ground", "fairy", "fighting", "psychic", "rock", "steel", "ice", "ghost", "dragon"]; 
+const categories = ["bug", "dragon", "electric", "fairy", "fire", "fighting", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "water", "rock", "steel"]; 
 const getButtons = () =>{
 const button = document.querySelector("#navBar")
 var coincidencia

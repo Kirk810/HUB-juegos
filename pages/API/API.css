@@ -15,3 +15,6 @@ figure{
   margin: 10px;
   grid-template-columns: repeat(3, minmax(400px, 1fr));
 }
+
+
+
