@@ -7,7 +7,7 @@ const template = () => `
 <h2>PokeApi</h2>
   <div class="pokemon">
   <div class="Div"><input type="text" id="search" class="input" placeholder="Busca tu pokemon"/></div>
-  <nav id="navBar" class="nav"><button id="allPokemon">TODOS</button></nav>
+  <nav id="navBar" class="nav"><button id="allPokemon">all</button></nav>
   <section id="gallery" class="gallery">
 </section>
   </div>
