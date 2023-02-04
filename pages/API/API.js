@@ -26,8 +26,9 @@ const getCharacters = async () => {
   mapPokemons(pokemons)
 }
 
+let mapPokemon = [];
 const mapPokemons = () =>{
-let mapPokemon = pokemons.map((pokemon) =>({
+    mapPokemon = pokemons.map((pokemon) =>({
     image: pokemon.sprites.other.dream_world.front_default,
     id: pokemon.id,
     name: pokemon.name,
