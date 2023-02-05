@@ -1,3 +1,9 @@
+#navBar{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 header {
     height: 10vh;
     display: flex;

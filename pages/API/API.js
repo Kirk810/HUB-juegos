@@ -4,7 +4,7 @@ import("./API.css")
 
 const template = () => `
 <a href="./Home/Home" class="back">BACK</a>
-<h2>PokeApi</h2>
+<h2><img src="/utils/logo_pokemon.png"></h2>
   <div class="pokemon">
   <div class="Div"><input type="text" id="search" class="input" placeholder="Busca tu pokemon"/></div>
   <nav id="navBar" class="nav"><button id="allPokemon">all</button></nav>
@@ -54,10 +54,10 @@ const printPokemons = (pokemons) => {
       <h2>${pokemon.name}</h2>
       <img src=${pokemon.image} alt= ${pokemon.name}
       <h3>Experience: ${pokemon.experience}</h3>
-      <h3 class=${pokemon.type}>${pokemon.type}</h3>
+      <h3 class=${pokemon.type}>Type: ${pokemon.type}</h3>
       <h3 class=${pokemon.type2}>${pokemon.type2 ? pokemon.type2 : ''}</h3>
-      <h3>Height: ${pokemon.height}</h3>
-      <h3>Weight: ${pokemon.weight}</h3>
+      <h3>Height: ${pokemon.height} cm</h3>
+      <h3>Weight: ${pokemon.weight} kg</h3>
       `
     card.appendChild(figure);
     gallery.appendChild(card);
@@ -65,7 +65,7 @@ const printPokemons = (pokemons) => {
 }
 
 const returnAllPokemon = () => {
-  document.querySelector('#allPokemon').addEventListener('click', () => {
+  document.querySelector("#allPokemon").addEventListener("click", () => {
     printPokemons(mapPokemon);
   });
 }
@@ -100,7 +100,6 @@ const searchPokemonsType = (type) => {
 }
 
 const mapPokemonsByType = (pokemonsByType) => {
-  console.log(pokemonsByType);
   let mapPokemonByType = pokemonsByType.map((pokemon) => ({
     image: pokemon.image,
     id: pokemon.id,
