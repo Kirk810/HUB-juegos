@@ -5,8 +5,8 @@ const template = () => `
 <section class="home">
   <h2>Bienvenido señor#<span id="userName"></span></h2>
     <ul class="hub">
-      <button id="API">APIpokemon<button>
-      <button>Tres en raya<button>
+      <button id="API"><img src="/utils/287221.png"><button>
+      <button id="tic"><img src="/utils/tictactoe.png"><button>
       <button>Quiz<button>
     </ul>
     <a class="back" href="">Log out<a>

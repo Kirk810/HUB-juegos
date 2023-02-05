@@ -4,7 +4,7 @@ import("./API.css")
 
 const template = () => `
 <a href="./Home/Home" class="back">BACK</a>
-<h2><img src="/utils/logo_pokemon.png"></h2>
+<h2 class="logo"><img src="/utils/logo_pokemon.png"></h2>
   <div class="pokemon">
   <div class="Div"><input type="text" id="search" class="input" placeholder="Busca tu pokemon"/></div>
   <nav id="navBar" class="nav"><button id="allPokemon">all</button></nav>
@@ -48,7 +48,6 @@ const printPokemons = (pokemons) => {
   gallery.innerHTML = "";
   for (const pokemon of pokemons) {
     const figure = document.createElement("figure");
-    const card = document.createElement("div")
     figure.innerHTML = `
       <h3>${pokemon.id}</h3>
       <h2>${pokemon.name}</h2>
@@ -59,8 +58,7 @@ const printPokemons = (pokemons) => {
       <h3>Height: ${pokemon.height} cm</h3>
       <h3>Weight: ${pokemon.weight} kg</h3>
       `
-    card.appendChild(figure);
-    gallery.appendChild(card);
+    gallery.appendChild(figure);
   }
 }
 
