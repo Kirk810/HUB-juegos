@@ -7,7 +7,7 @@ const template = () => `
 <button id="back"><img src="/utils/Left.png"></button>
 <h2 class="logo"><img src="/utils/logo_pokemon.png"></h2>
   <div class="pokemon">
-  <div class="Div"><input type="text" id="search" class="input" placeholder="Busca tu pokemon"/></div>
+  <div class="Div"><input type="text" id="search" class="input" placeholder="Catch your pokemon"/></div>
   <nav id="navBar" class="nav"><button id="allPokemon">all</button></nav>
   <section id="gallery" class="gallery">
   </section>
@@ -53,7 +53,7 @@ const printPokemons = (pokemons) => {
     const figure = document.createElement("figure");
     figure.innerHTML = `
       <h3 id="id">${pokemon.id}</h3>
-      <h2>${pokemon.name}</h2>
+      <h2>${pokemon.name.toUpperCase()}</h2>
       <img src=${pokemon.image} alt= ${pokemon.name}/>
       <h3>Experience: ${pokemon.experience}</h3>
       <h3 class=${pokemon.type}>Type: ${pokemon.type}</h3>
@@ -65,19 +65,15 @@ const printPokemons = (pokemons) => {
   }
 }
 
-const returnAllPokemon = () => {
-  document.querySelector("#allPokemon").addEventListener("click", () => {
-    printPokemons(mapPokemon);
-  });
-}
-
 const addListener = () => {
   const search = document.querySelector("#search")
   search.addEventListener("input", () => {
     filterCharacters(mapPokemon);
   }); const backHome = document.querySelector("#back")
   backHome.addEventListener("click", () => { initContent("Home");
-  })
+  }); const filterPokemon = document.querySelector("#allPokemon")
+  filterPokemon.addEventListener("click", () => {printPokemons(mapPokemon);
+  });
 }
 
 const filterCharacters = (pokemons) => {
@@ -95,8 +91,7 @@ const getButtons = () => {
     Btn.addEventListener("click", (ev) => {
       searchPokemonsType(ev.target.innerHTML);
     })
-  }
-}
+  }}
 
 const searchPokemonsType = (type) => {
   mapPokemonsByType(mapPokemon.filter((pokemon) => pokemon.type === type));
@@ -121,5 +116,4 @@ export const printTemplate = () => {
   getCharacters();
   addListener();
   getButtons();
-  returnAllPokemon();
 }
