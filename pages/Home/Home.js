@@ -2,6 +2,7 @@ import "./Home.css";
 import { initContent } from "../../main";
 
 const template = () => `
+<a class="back">Log out<a>
 <section class="home">
   <h2>Bienvenido señor#<span id="userName"></span></h2>
     <ul class="hub">
@@ -9,7 +10,6 @@ const template = () => `
       <button id="tic"><img src="/utils/tictactoe.png"><button>
       <button>Quiz<button>
     </ul>
-    <a class="back" href="">Log out<a>
 </section>
 `
 

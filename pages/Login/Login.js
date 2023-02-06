@@ -5,7 +5,7 @@ const template = () => `
 <h2>Introduce tu Nick</h2>
 <section class="login">  
   <input type="text" id="loginInput"/>
-  <a href="./Home/Home" id="loginBtn">Login</a>
+  <a id="loginBtn">Login</a>
 </section>
 `;
 
@@ -13,7 +13,8 @@ const addListeners = () =>{
   const loginInput = document.querySelector("#loginInput");
   document.querySelector("#loginBtn").addEventListener("click", () => {
         localStorage.setItem("user",loginInput.value); 
-      }); initContent("Login");
+        initContent("Home");
+      });
 }
 
 export const printTemplate = () => {

@@ -1,22 +1,24 @@
 //He rehecho todo el proceso de la API despues de llegar a un punto muerto que me estaba quitando mcho tiempo.
 
+import { initContent } from "../../main";
+
 import("./API.css")
 
 const template = () => `
-<a href="./Home/Home" class="back">BACK</a>
+<button id="back"><img src="/utils/Left.png"></button>
 <h2 class="logo"><img src="/utils/logo_pokemon.png"></h2>
   <div class="pokemon">
   <div class="Div"><input type="text" id="search" class="input" placeholder="Busca tu pokemon"/></div>
   <nav id="navBar" class="nav"><button id="allPokemon">all</button></nav>
   <section id="gallery" class="gallery">
-</section>
+  </section>
   </div>
 `
 
 const Url = "https://pokeapi.co/api/v2/pokemon/";
 let index = 1;
 let mapPokemon = [];
-const categories = ["grass", "poison", "fire", "flying", "water", "bug", "normal", "electric", "ground", "fairy", "fighting", "psychic", "rock", "steel", "ice", "ghost", "dragon"];
+const categories = ["bug", "dragon", "electric", "fairy", "fire", "fighting", "flying", "ghost", "grass", "ground", "ice", "normal", "poison", "psychic", "water", "rock", "steel"];
 
 const getCharacters = async () => {
   let pokemons = [];
@@ -29,9 +31,11 @@ const getCharacters = async () => {
   mapPokemons(pokemons);
 }
 
+//sprites.other.dream_world.front_default,
+//sprites.versions["generation-v"]["black-white"].animated.front_default,
 const mapPokemons = (pokemons) => {
   mapPokemon = pokemons.map((pokemon) => ({
-    image: pokemon.sprites.other.dream_world.front_default,
+    image: pokemon.sprites.versions["generation-v"]["black-white"].animated.front_default,
     id: pokemon.id,
     name: pokemon.name,
     experience: pokemon.base_experience,
@@ -49,9 +53,9 @@ const printPokemons = (pokemons) => {
   for (const pokemon of pokemons) {
     const figure = document.createElement("figure");
     figure.innerHTML = `
-      <h3>${pokemon.id}</h3>
+      <h3 id="id">${pokemon.id}</h3>
       <h2>${pokemon.name}</h2>
-      <img src=${pokemon.image} alt= ${pokemon.name}
+      <img src=${pokemon.image} alt= ${pokemon.name}/>
       <h3>Experience: ${pokemon.experience}</h3>
       <h3 class=${pokemon.type}>Type: ${pokemon.type}</h3>
       <h3 class=${pokemon.type2}>${pokemon.type2 ? pokemon.type2 : ''}</h3>
@@ -71,7 +75,9 @@ const returnAllPokemon = () => {
 const addListener = () => {
   const search = document.querySelector("#search")
   search.addEventListener("input", () => {
-    filterCharacters(mapPokemon)
+    filterCharacters(mapPokemon);
+  }); const backHome = document.querySelector("#back")
+  backHome.addEventListener("click", () => { initContent("Home");
   })
 }
 
