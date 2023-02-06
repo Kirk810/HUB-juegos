@@ -114,8 +114,6 @@ const mapPokemonsByType = (pokemonsByType) => {
   printPokemons(mapPokemonByType);
 }
 
-
-
 export const printTemplate = () => {
   document.querySelector("#app").innerHTML = template();
   getCharacters();

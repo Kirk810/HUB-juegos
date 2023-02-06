@@ -8,7 +8,6 @@ const template = () => `
     <ul class="hub">
       <button id="API"><img src="/utils/287221.png"><button>
       <button id="piedra"><img src="/utils/piedra.png"><button>
-      <button>Quiz<button>
     </ul>
 </section>
 `
