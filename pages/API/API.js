@@ -6,8 +6,8 @@ import("./API.css")
 const template = () => `
 <button id="back"><img src="/utils/Left.png"></button>
 <h2 class="logo"><img src="/utils/logo_pokemon.png"></h2>
+<div class="Div"><input type="text" id="search" class="input" placeholder="Busca tu pokemon"/></div>
   <div class="pokemon">
-  <div class="Div"><input type="text" id="search" class="input" placeholder="Busca tu pokemon"/></div>
   <nav id="navBar" class="nav"><button id="allPokemon">all</button></nav>
   <section id="gallery" class="gallery">
   </section>
@@ -39,7 +39,7 @@ const mapPokemons = (pokemons) => {
     height: (pokemon.height) * 10,
     weight: (pokemon.weight) / 10,
     type: pokemon.types[0].type.name,
-    type2: pokemon.types[1]?.type.name,
+    type: pokemon.types[1]?.type.name,
   }))
   printPokemons(mapPokemon);
 }
@@ -51,11 +51,11 @@ const printPokemons = (pokemons) => {
     const figure = document.createElement("figure");
     figure.innerHTML = `
       <h3 id="id">${pokemon.id}</h3>
-      <h2>${pokemon.name}</h2>
+      <h2>${pokemon.name.toUpperCase()}</h2>
       <img src=${pokemon.image} alt= ${pokemon.name}/>
       <h3>Experience: ${pokemon.experience}</h3>
       <h3 class=${pokemon.type}>Type: ${pokemon.type}</h3>
-      <h3 class=${pokemon.type2}>${pokemon.type2 ? pokemon.type2 : ''}</h3>
+      <h3 class=${pokemon.type}>${pokemon.type ? pokemon.type : ''}</h3>
       <h3>Height: ${pokemon.height} cm</h3>
       <h3>Weight: ${pokemon.weight} kg</h3>
       `
