@@ -2,19 +2,19 @@ import "./Login.css";
 import { initContent } from "../../main";
 
 const template = () => `
-<h2>Introduce tu Nick</h2>
+<h2>Put your name</h2>
 <section class="login">  
   <input type="text" id="loginInput"/>
-  <a id="loginBtn">Login</a>
+  <a id="loginBtn" style="cursor:pointer;">Login</a>
 </section>
 `;
 
 const addListeners = () =>{
   const loginInput = document.querySelector("#loginInput");
   document.querySelector("#loginBtn").addEventListener("click", () => {
-        localStorage.setItem("user",loginInput.value); 
-        initContent("Home");
-      });
+    localStorage.setItem("user", loginInput.value); 
+    initContent("Home");
+  });
 }
 
 export const printTemplate = () => {

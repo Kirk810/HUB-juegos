@@ -97,7 +97,7 @@ const getButtons = () => {
 }
 
 const searchPokemonsType = (type) => {
-  mapPokemonsByType(mapPokemon.filter((pokemon) => pokemon.type === type));
+  mapPokemonsByType(mapPokemon.filter((pokemon) => pokemon.type === type || pokemon.type2 === type));
 }
 
 const mapPokemonsByType = (pokemonsByType) => {

@@ -2,7 +2,7 @@ import "./Home.css";
 import { initContent } from "../../main";
 
 const template = () => `
-<a class="back">Log out<a>
+<a class="back"><img src="/utils/logout.svg"><a>
 <section class="home">
   <h2>Welcome<span id="userName"></span></h2>
     <ul class="hub">

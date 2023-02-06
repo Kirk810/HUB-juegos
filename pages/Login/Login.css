@@ -1,10 +1,10 @@
 .login {
     background-color: #7a36D4;
+    border:rgb(0, 0, 0);
     display: flex;
     align-items: center;
     padding: 2rem;
     justify-content: center;
-    margin: 10vh 70vh;
     gap: 10px;
     border-top-left-radius: 70px;
     border-top-right-radius: 30px;
@@ -17,9 +17,10 @@ h2{
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 10vh 40vh;
+    margin: 10vh 0;
 }
 
 .login > a{
+    font-size: 30px;
     color: rgb(0, 0, 0);
 }

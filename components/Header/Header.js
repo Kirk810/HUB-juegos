@@ -1,10 +1,7 @@
 import "./Header.css";
-import { initContent } from "../../main";
 
 const template = () =>`
-<button class="my-btn">
-<h4>Cambia Fondo</h4>
-</button>
+<button><img src="/utils/colores.png"></button>
 `
 
 function colorCode() {
@@ -20,7 +17,7 @@ const addListeners = () =>{
   document.querySelector("button")
   .addEventListener("click" , () => {
     document.body.style.backgroundColor = colorCode();
-  }); initContent("body");
+  })
     }
 
 export const printTemplate = () => {
