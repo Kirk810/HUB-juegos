@@ -8,6 +8,7 @@ const template = () => `
 <h2 class="logo"><img src="/utils/logo_pokemon.png"></h2>
 <div class="Div"><input type="text" id="search" class="input" placeholder="Catch your pokemon"/></div>
 <nav id="navBar" class="nav"><button id="allPokemon">all</button></nav>  
+<div id="spinner"><img src="/utils/2iij.gif"></div>
 <div class="pokemon">
   <section id="gallery" class="gallery">
   </section>
@@ -93,8 +94,7 @@ const getButtons = () => {
     Btn.addEventListener("click", (ev) => {
       searchPokemonsType(ev.target.innerHTML);
     })
-  }
-}
+  }}
 
 const searchPokemonsType = (type) => {
   mapPokemonsByType(mapPokemon.filter((pokemon) => pokemon.type === type || pokemon.type2 === type));
@@ -113,6 +113,8 @@ const mapPokemonsByType = (pokemonsByType) => {
   }));
   printPokemons(mapPokemonByType);
 }
+
+
 
 export const printTemplate = () => {
   document.querySelector("#app").innerHTML = template();
