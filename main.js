@@ -16,9 +16,9 @@ export const initContent = (route) => {
           case "API":
             apiTemplate();
             break;
-          case "Tic":
+          /*case "Tic":
             ticTemplate();
-            break
+            break*/
           case "Login":
             loginTemplate();
             break;
