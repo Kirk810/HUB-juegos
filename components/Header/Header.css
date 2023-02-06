@@ -1,12 +1,16 @@
-button{
-  background: transparent;
+header > .Btn{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: transparent;
   border: 0;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 20rem;
 }
 
-button > img{
-  display: flex;
-  justify-content: flex-end;  
-  margin: 30px 30px;;
-  width: 100px;
+.Btn > img{
+  margin: 1rem 2rem;
+  width: 8rem;
   height: auto;
 }

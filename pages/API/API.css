@@ -2,7 +2,7 @@
   width: 100px;
   height: auto;
   position: relative;
-  top: 30px;
+  bottom: 30px;
   left: 20px;
 }
 
@@ -13,7 +13,7 @@
 
 .logo > img{
   position: relative;
-  bottom: 200px;
+  bottom: 150px;
   width: 500px;
   height: auto;
 }
@@ -26,7 +26,7 @@
   align-items: center;
   padding-bottom: 4rem;
   gap: 10px;
-  bottom: 200px;
+  bottom: 210px;
 }
 
 #navBar > button{
@@ -35,6 +35,11 @@
   width: 80px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: red;
+  border: 4px solid black;
+  border-radius: 30px;
+  font-size: 17px;
 }
 
 #navBar > button:hover{

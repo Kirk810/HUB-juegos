@@ -7,7 +7,7 @@ const template = () => `
   <h2>Welcome<span id="userName"></span></h2>
     <ul class="hub">
       <button id="API"><img src="/utils/287221.png"><button>
-      <button id="tic"><img src="/utils/tictactoe.png"><button>
+      <button id="piedra"><img src="/utils/piedra.png"><button>
       <button>Quiz<button>
     </ul>
 </section>

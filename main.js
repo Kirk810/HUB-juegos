@@ -3,7 +3,7 @@ import {printTemplate as loginTemplate} from "./pages/Login/Login";
 import {printTemplate as homeTemplate} from "./pages/Home/Home";
 import {printTemplate as headerTemplate} from "./components/Header/Header";
 import {printTemplate as apiTemplate} from "./pages/API/API";
-//import {printTemplate as ticTemplate} from "./pages/Tic/Tic";
+import {printTemplate as ticTemplate} from "./pages/Tic/Tic";
 
 export const initContent = (route) => {
   switch (route) {
@@ -16,9 +16,9 @@ export const initContent = (route) => {
           case "API":
             apiTemplate();
             break;
-          /*case "Tic":
+          case "Tic":
             ticTemplate();
-            break*/
+            break
           case "Login":
             loginTemplate();
             break;
