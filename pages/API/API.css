@@ -2,8 +2,8 @@
   width: 100px;
   height: auto;
   position: relative;
-  top: 40px;
-  left: 70px;
+  top: 30px;
+  left: 20px;
 }
 
 #back{
@@ -14,19 +14,27 @@
 .logo > img{
   position: relative;
   bottom: 200px;
-  width: 400px;
+  width: 500px;
   height: auto;
 }
 
 #navBar{
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  position: absolute;
-  width: 20px;
-  height: 40px;
+  padding-bottom: 4rem;
   gap: 10px;
+  bottom: 200px;
+}
+
+#navBar > button{
+  height: 2.4rem;
+  padding: 0.5 0;
+  width: 80px;
+  display: flex;
+  justify-content: center;
 }
 
 #navBar > button:hover{
@@ -34,34 +42,39 @@
   transition: all 0.2s ease-in-out;
 }
 
-.Div{
+.input{
+  background: none;
+  border: none;
+  font-size: 25px;
   display: flex;
   align-items: center;
   position: relative;
-  left: 72px;
-  bottom: 200px;
+  left: 120px;
+  bottom: 240px;
+}
+
+.input::placeholder{
+  color: black;
 }
 
 .pokemon{
-  display: flex;
-  justify-content: center;
   position: relative;
-  bottom: 200px;
-  padding: 1rem 5rem;
-  margin: 10px;
-  grid-template-columns: repeat(3, minmax(400px, 1fr));
+    display: flex;
+    flex-direction: column;
+    padding: 0 5rem;
+    bottom: 280px;
 }
 
-.gallery{
-  position: relative;
-  top: 50px;
-  display: grid;
+#gallery{
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 5rem 5rem;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  gap: 80px;
-  flex-flow: wrap;
+  display: grid;
+  margin: 100px 100px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 200px;
+
 }
 
 figure{

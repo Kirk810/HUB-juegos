@@ -7,8 +7,8 @@ const template = () => `
 <button id="back"><img src="/utils/Left.png"></button>
 <h2 class="logo"><img src="/utils/logo_pokemon.png"></h2>
 <div class="Div"><input type="text" id="search" class="input" placeholder="Catch your pokemon"/></div>
-  <div class="pokemon">
-  <nav id="navBar" class="nav"><button id="allPokemon">all</button></nav>
+<nav id="navBar" class="nav"><button id="allPokemon">all</button></nav>  
+<div class="pokemon">
   <section id="gallery" class="gallery">
   </section>
   </div>
