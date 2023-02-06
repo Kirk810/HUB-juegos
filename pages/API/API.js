@@ -1,7 +1,6 @@
 //He rehecho todo el proceso de la API despues de llegar a un punto muerto que me estaba quitando mcho tiempo.
 
 import { initContent } from "../../main";
-
 import("./API.css")
 
 const template = () => `
