@@ -29,6 +29,11 @@
   gap: 10px;
 }
 
+#navBar > button:hover{
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+}
+
 .Div{
   display: flex;
   align-items: center;
