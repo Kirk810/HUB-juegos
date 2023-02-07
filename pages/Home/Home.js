@@ -4,10 +4,9 @@ import { initContent } from "../../main";
 const template = () => `
 <a class="back"><img src="/utils/logout.svg"><a>
 <section class="home">
-  <h2>Welcome<span id="userName"></span></h2>
+  <h2>Welcome ${localStorage.getItem (["user"])}</h2>
     <ul class="hub">
       <button id="API"><img src="/utils/287221.png"><button>
-      <button id="piedra"><img src="/utils/piedra.png"><button>
     </ul>
 </section>
 `
@@ -19,14 +18,13 @@ const addListeners = () =>{
   }); const pok = document.querySelector("#API")
   pok.addEventListener("click" , () => {
     initContent("API");
-  }); const tic = document.querySelector("#tic")
+  }); /*const tic = document.querySelector("#piedra")
   tic.addEventListener("click" , () => {
-    initContent("Tic");
-  })
+    initContent("Piedra");
+  })*/
     }
 
 export const printTemplate = () => {
     document.querySelector("main").innerHTML = template();
-    document.querySelector("#userName").innerHTML = localStorage.getItem("user");
     addListeners();
   };

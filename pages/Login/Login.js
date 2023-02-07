@@ -2,7 +2,7 @@ import "./Login.css";
 import { initContent } from "../../main";
 
 const template = () => `
-<h2>Put your name</h2>
+<h2>Put your nickname</h2>
 <section class="login">  
   <input type="text" id="loginInput"/>
   <a id="loginBtn" style="cursor:pointer;">Login</a>
